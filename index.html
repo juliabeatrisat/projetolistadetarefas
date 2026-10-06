@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="cabecalho">
+            <p class="subtitulo">ORGANIZAÇÃO PESSOAL</p>
+            <h1>Lista de Tarefas</h1>
+            <p class="descricao">
+                Organize suas atividades e acompanhe seu progresso.
+            </p>
+        </div>
+
+        <section class="cartao">
+
+            <div class="entrada">
+                <input 
+                    type="text" 
+                    id="tarefa"
+                    placeholder="Digite uma nova tarefa..."
+                >
+
+                <button id="btnAdicionar">
+                    Adicionar
+                </button>
+            </div>
+
+            <p id="mensagem"></p>
+
+            <div class="informacoes">
+
+                <div>
+                    <strong id="contador">0</strong>
+                    <span>tarefas</span>
+                </div>
+
+                <button id="btnLimpar">
+                    Limpar tudo
+                </button>
+
+            </div>
+
+            <div class="filtros">
+
+                <button class="filtro ativo" data-filtro="todas">
+                    Todas
+                </button>
+
+                <button class="filtro" data-filtro="pendentes">
+                    Pendentes
+                </button>
+
+                <button class="filtro" data-filtro="concluidas">
+                    Concluídas
+                </button>
+
+            </div>
+
+            <ul id="listaTarefas"></ul>
+
+            <div id="mensagemVazia" class="mensagem-vazia">
+                <div class="icone">✓</div>
+                <h2>Nenhuma tarefa por aqui</h2>
+                <p>Adicione uma tarefa para começar sua organização.</p>
+            </div>
+
+        </section>
+
+        <footer>
+            Desenvolvido com HTML, CSS e JavaScript
+        </footer>
+
+    </main>
+
+    <script src="javaa.js"></script>
+
+</body>
+</html>

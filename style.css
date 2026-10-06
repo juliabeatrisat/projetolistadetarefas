@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8f9ff);
+    min-height: 100vh;
+    color: #20243a;
+}
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 60px 0 30px;
+}
+
+.cabecalho {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subtitulo {
+    color: #5b5bd6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    color: #777;
+    font-size: 16px;
+}
+
+.cartao {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(40, 40, 80, 0.12);
+}
+
+.entrada {
+    display: flex;
+    gap: 10px;
+}
+
+#tarefa {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e5e5f0;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+#tarefa:focus {
+    border-color: #6c63ff;
+}
+
+#btnAdicionar {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 0 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btnAdicionar:hover {
+    background-color: #554dd8;
+}
+
+#mensagem {
+    min-height: 22px;
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.informacoes strong {
+    font-size: 25px;
+    color: #6c63ff;
+}
+
+.informacoes span {
+    color: #777;
+    margin-left: 5px;
+}
+
+#btnLimpar {
+    border: none;
+    background: none;
+    color: #e74c3c;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filtros {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.filtro {
+    border: 1px solid #dddded;
+    background-color: white;
+    color: #666;
+    padding: 9px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filtro:hover {
+    background-color: #f2f1ff;
+}
+
+.filtro.ativo {
+    background-color: #6c63ff;
+    color: white;
+    border-color: #6c63ff;
+}
+
+#listaTarefas {
+    list-style: none;
+}
+
+.tarefa-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f8f8fc;
+    border-radius: 12px;
+    border: 1px solid #eeeeF5;
+}
+
+.tarefa-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.texto-tarefa {
+    font-size: 15px;
+    word-break: break-word;
+}
+
+.tarefa-item.concluida .texto-tarefa {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.btnExcluir {
+    border: none;
+    background-color: #ffe9e9;
+    color: #e74c3c;
+    padding: 8px 11px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnExcluir:hover {
+    background-color: #ffd5d5;
+}
+
+.mensagem-vazia {
+    text-align: center;
+    padding: 35px 15px;
+    color: #888;
+}
+
+.mensagem-vazia .icone {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background-color: #eeedff;
+    color: #6c63ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.mensagem-vazia h2 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.mensagem-vazia p {
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #999;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding-top: 35px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .cartao {
+        padding: 20px;
+    }
+
+    .entrada {
+        flex-direction: column;
+    }
+
+    #btnAdicionar {
+        padding: 14px;
+    }
+
+    .tarefa-item {
+        align-items: flex-start;
+    }
+
+}
